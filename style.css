@@ -8,24 +8,20 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color:hsl(0, 100%, 74%);
     background-image: url(images/bg-intro-mobile.png);
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; */
+    min-height: 100vh;
 }
 
 main{
-    margin:20px auto;
+    margin:40px auto;
     width: 90%;
 }
 
 .description{
     color:#fff;
     text-align: center;
-}
-
-.description h1{
-    font-size: ;
 }
 
 .description p{
@@ -39,11 +35,11 @@ main{
     justify-content: center;
     background-color:hsl(248, 32%, 49%);
     color:#fff;
-    height:80px;
-    padding:0 60px; 
-    margin:40px 0 0 0;
+    padding:25px 60px; 
+    margin:50px 0 0 0;
     text-align: center;
     border-radius:8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 3px 0px;
 }
 
 .deal-7days h2{
@@ -56,25 +52,48 @@ span.bold{
     font-weight: 600;
 }
 
+/* *----------------Form------------------------- */
 .form{
     background-color: #fff;
-    padding:20px;
-    margin:20px 0 0 0;
+    padding:15px 25px 25px 25px;
+    margin:30px 0 0 0;
     border-radius: 8px;
+    color:hsl(249, 10%, 26%);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 3px 0px;
 }
-
-.form input{
+.form .input-space{
+    position: relative;
     height:55px;
+    margin:20px 0 0 0;
+}
+.form .input-space input{
+    height:100%;
     width:100%;
-    margin:7px 0;
-    padding:15px;
-    border-radius:5px;
+    padding:15px 25px ;
+    border-radius:5px; 
     border:hsl(245, 37%, 88%) solid 1px;
 }
-
-.form {
-    color:hsl(249, 10%, 26%);
+input:focus {
+    border: 2px solid hsl(0, 100%, 74%);
 }
+.form .input-space .failure-icon{
+    position:absolute;
+    right: 25px;
+    bottom:15px;
+    opacity:0;
+}
+::placeholder{
+    font-weight: 700;
+}
+.error{
+    color:hsl(0, 100%, 74%);
+    font-size:11px;
+    font-weight:500;
+    text-align: right;
+    font-style:italic;    
+}
+/* *------------------------------------------------ */
+
 
 .claim{
     height:60px;
@@ -85,30 +104,65 @@ span.bold{
     background-color:hsl(154, 59%, 51%) ;
     border:none;
     border-radius:5px;
-    margin:10px 0;
+    margin:20px 0 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    transition: 0.5s;
+}
+
+.claim:hover{
+    background-color:hsl(154, 69%, 65%) ;
+    cursor:pointer;
+    transition: 0.5s;
 }
 
 .agree-statement{
     font-size:12px;
     text-align: center;
+    color:hsl(246, 25%, 77%);
 }
 span.red{
     color:hsl(0, 100%, 74%);
     font-weight: 600;
 }
 
-
+/* ?----------------------Desktop/Tablet version------------------ */
 @media(min-width:700px){
+    body{
+        background-image: url(images/bg-intro-desktop.png);
+    }
+
     main{
         display: flex;
+        width:95%;
     }
 
     .description{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: justify;
-        width: 50%;
-        margin:0 50px 0 0;
+        text-align: left;
+        width: 40%;
+        margin:0 3% 0 auto;
+    }
+
+    .description h1{
+        font-size: 50px;
+        line-height:1.2em;
+    }
+
+    .sign-in{
+        margin-right:auto;
+    }
+
+    .deal-7days{
+        margin-top:0;
+    }
+
+    .form{
+        padding:20px 40px 35px 40px;
+    }
+
+    .deal-7days{
+        padding:20px 40px;
     }
 }
